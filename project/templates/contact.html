@@ -1,13 +1,41 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        /* Simple CSS for the navbar */
+        nav {
+            background-color: #333;
+            padding: 1em;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <a href="about">about</a>
-    <a href="home">home</a>
-    <h1>Welcome Contact</h1>
+    <nav>
+        <ul>
+            <li><a href="about">About</a></li>
+            <li><a href="home">home</a></li>
+        </ul>
+    </nav>
+    <h1>Welcome contact</h1>
 </body>
 </html>
