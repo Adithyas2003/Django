@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {%  load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    
+</head>
+<body>
+    <h1>Home</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        <input type="number" name="roll_no" placeholder="Roll No" id="">
+        <input type="text" name="name" placeholder="Name" id="">
+        <input type="text" name="age" placeholder="Age" id="">
+        <input type="text" name="address" placeholder="address" id="">
+        <input type="number" name="class_name" placeholder="class_name" id="">
+        <input type="submit" value="Add">
+    </form>
+
+    <table>
+        <tr>
+            <th>roll_no</th>
+            <th>name</th>
+            <th>age</th>
+            <th>address</th>
+            <th>class_name</th>
+        </tr>
+        {% for std in student %}
+        <tr>
+            <td>{{ std.roll_no }}</td>
+            <td>{{ std.name }}</td>
+            <td>{{ std.age }}</td>
+            <td>{{ std.address}}</td>
+            <td>{{ std.class_name}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <img src="{% static 'img/images.jpeg'%}" alt="">
+</body>
+</html>
