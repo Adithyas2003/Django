@@ -35,9 +35,13 @@
             <td>{{ std.age }}</td>
             <td>{{ std.address}}</td>
             <td>{{ std.class_name}}</td>
+            <td>
+                <a href="edit/{{std.roll_no}}">Edit</a>
+                <a href="delete/{{std.roll_no}}">Delete</a>
+            </td>
         </tr>
         {% endfor %}
     </table>
-    <img src="{% static 'img/images.jpeg'%}" alt="">
+
 </body>
 </html>
